@@ -10,7 +10,7 @@ def mask_pii(text):
     entities = []
     masked_text = text
 
-    # Regex-based masking
+
     for pattern, label in [(EMAIL_PATTERN, "EMAIL"), (PHONE_PATTERN, "PHONE")]:
         for match in re.finditer(pattern, text):
             start, end = match.start(), match.end()
@@ -23,7 +23,6 @@ def mask_pii(text):
                     "entity": original
                 })
 
-    # NER-based masking
     doc = nlp(masked_text)
     for ent in doc.ents:
         if ent.label_ in ["PERSON", "ORG", "GPE"]:
