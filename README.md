@@ -1,4 +1,4 @@
-# 📧 Email Classification with PII Masking 🔐
+#  Email Classification with PII Masking 
 
 This project classifies emails into 4 categories — **Incident, Request, Problem, or Change** — while protecting privacy by **masking PII (Personally Identifiable Information)** like names, emails, and phone numbers.
 
